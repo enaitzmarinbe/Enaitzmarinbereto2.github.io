@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Titulo y referencia al css-->
+<head>
+    <title>Pedir cita - DomusTech</title>
+    <link rel="stylesheet" href="pedir_cita.css">
+</head>
+
+<body>
+<!-- Header -->
+    <header id="navbar">
+        <div id="logo">
+            <img src="logo DOMUSTECH.png" alt="Logo de la tienda" />
+            <a href="Pagina_principal.html">DomusTech</a>
+        </div>
+
+<!--Barra de navegacion con links a las otras paginas html-->
+        <nav id="menu">
+            <div class="menu-items">
+                <div><a href="pedir-cita.html">Pedir cita</a></div>
+                <div><a href="tienda.html">Tienda</a></div>
+                <div><a href="sobre-nosotros.html">Sobre nosotros</a></div>
+            </div>
+        </nav>
+  </header>
+
+
+    <div class="container">
+        <h1>Pedir cita</h1>
+        <p>Completa el siguiente formulario para solicitar una cita con nuestros tecnicos. Nos pondremos en contacto con usted para confirmar la fecha y hora.</p>
+ 
+<!--Usando form podemos crear un formulario-->       
+        <form id="appointment-form">
+
+ <!--Al usar label for se asocia el texto al formulario, y el input "text" es para indicar que el tipo de input va a ser texto, igual que email, tel para telefono y date para fecha -->           
+            <div class="form-group">
+                <label for="name">Nombre completo *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Correo electronico *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Telefono *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+<!--Los select seguidos por option value son para crear una opcion y añadir los valores de esta opcion-->           
+            <div class="form-group">
+                <label for="service">Tipo de servicio *</label>
+                <select id="service" name="service" required>
+                    <option value="">Seleccione un servicio</option>
+                    <option value="montaje-tienda">Montaje en tienda</option>
+                    <option value="montaje-domicilio">Montaje a domicilio</option>
+                    <option value="mantenimiento">Mantenimiento y limpieza</option>
+                    <option value="asesoramiento">Asesoramiento tecnico</option>
+                    <option value="problemas">Solucion de problemas</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">Ubicacion del servicio</label>
+                <select id="location" name="location">
+                    <option value="tienda">En tienda</option>
+                    <option value="domicilio">A domicilio</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Fecha preferida</label>
+                <input type="date" id="date" name="date">
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Hora preferida</label>
+                <select id="time" name="time">
+                    <option value="">Seleccione una hora</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                </select>
+            </div>
+<!--Textarea es para indicar que hay un contenedor donde se va a añadir texto y puedes limitar cuantas lineas se permiten usando rows-->            
+            <div class="form-group">
+                <label for="description">Descripcion del problema o servicio requerido</label>
+                <textarea id="description" name="description" rows="6"></textarea>
+            </div>
+<!--Button es para crear un boton (aunque en este caso no es funcional)-->            
+            <button type="submit">Solicitar Cita</button>
+        </form>
+    </div>
+
+<!--Footer-->
+<footer>
+    <div class="footer">
+        <p>2025 DomusTech - Montajes y mantenimientos informaticos</p>
+    </div>
+</footer>
+
+</body>
+</html>

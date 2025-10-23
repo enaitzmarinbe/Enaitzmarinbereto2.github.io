@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+  margin: 0;                      /* Elimina márgenes por defecto de todos los elementos */
+  padding: 0;                     /* Elimina padding por defecto de todos los elementos */
+  box-sizing: border-box;         /* Hace que width y height incluyan padding y borde */
+  font-family: Arial, sans-serif; /* Fuente por defecto */
+  line-height: 1.6;
+}
+
+/* Contenedor del navbar */
+#navbar {
+  display: flex;                  /* Activa flexbox para alinear elementos en fila */
+  align-items: center;            /* Centra verticalmente los elementos dentro del navbar */
+  position: relative;             /* Permite que los elementos absolute dentro se posicionen respecto al navbar */
+  padding: 10px 20px;             /* Espacio interno arriba/abajo y a los lados */
+  background-color: #db6f0a;    /* Color de fondo naranja */
+}
+
+/* Ajustes de logo y nombre de tienda */
+#logo {
+  display: flex;                  /* Flex para alinear imagen y texto del logo en línea */
+  align-items: center;            /* Centra verticalmente la imagen y el nombre */
+  gap: 10px;                      /* Espacio entre imagen y texto */
+}
+
+#logo img {
+  height: 50px;                   /* Altura fija para el logo */
+}
+
+#logo a {
+  align-content: center;
+  color: white;                 /* Color del texto */
+  font-size: 1.5rem;              /* Tamaño de fuente */
+  font-weight: bold;              /* Negrita */
+  text-decoration: none;
+}
+
+/* Menú centrado */
+.menu-items {
+  display: flex;                  /* Flex para poner los items en fila */
+  gap: 30px;                      /* Espacio entre los items */
+  position: absolute;             /* Posiciona el menú respecto al navbar */
+  align-items: center;            /* Centra verticalmente los items */
+  left: 42%;                      /* Hace que los items en .menu-items se centren adecuadamente en la barra, comenzando desde un punto en concreto*/
+}
+
+.menu-items a {
+  color: white;                 /* Color de los enlaces */
+  text-decoration: none;          /* Quita subrayado que tendria si no*/
+  font-weight: bold;              /* Negrita */
+}
+
+/*Barra de busqueda*/
+.search-container {
+  display: flex;                  /*activa el flex*/
+  justify-content: center;        /*centra horizontalmente*/
+  align-items: center;            /*centra verticalemnte*/
+  margin: 20px;                   /*crea un margen*/
+}
+
+#search-input {
+  padding: 10px 15px;             /*tamaño interno de la barra de busqueda*/
+  width: 250px;                   /*ancho de la barra de busqueda*/
+  border: 2px solid #ccc;       /*ancho del borde y color*/
+  border-radius: 25px 0 0 25px;   /*redondea el borde*/
+  font-size: 16px;                /*tamaño del texto*/
+}
+
+#search-button {
+  padding: 10px 15px;             /*tamaño interno del boton de busqueda*/
+  border: 2px solid #ccc;       /*ancho del borde y color*/
+  border-left: none;              /*quita espacio entre barra de busqueda y boton de husqueda*/
+  border-radius: 0 25px 25px 0;   /*redondea el borde*/
+  cursor: pointer;                /*cambia el cursor al ponerlo encima*/
+  font-size: 16px;                /*tamaño del texto*/            
+}
+
+#search-button:hover {
+  background-color: #ff9900;    /*color al poner el cursor encima*/
+}
+
+/*FOTOS*/
+.galeria {
+    display: flex;                /*activa el flex*/
+    flex-wrap: wrap;              /*pone los items en varias lineas*/
+    gap: 15px;                    /*espacio entre items*/
+    justify-content: center;      /*centra los items*/
+}
+
+.foto-container {
+    flex: 0 0 calc(25% - 20px);                /* 4 elementos por línea (100%/4) */
+    max-width: calc(25% - 20px);               /*maximo de anchura del contenedor de foto+texto*/
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);  /*sombra del contenedor*/
+}
+
+.foto-container:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);    /*sombra al poner el raton sobre el contenedor*/
+  cursor: pointer;                             /*cambia el cursor al ponerlo encima del contenedor*/
+} 
+
+.foto {
+    width: 100%;                  /*100% del tamaño del contenedor de anchura*/
+}
+
+h3 {
+    padding: 10px;                /*espacio interno del h3*/
+    text-align: center;           /*alinea el h3 en el centro*/
+    font-size: 0.9rem;            /*tamaño del texto*/
+    color: #2c3e50;             /*color del texto*/
+    font-weight: 500;             /*peso del texto*/
+}
+
+
+/* Footer */
+footer {
+  background: #ff9900;           /*Color del fondo del footer*/
+  color: white;                  /*Color de la letra*/
+  text-align: center;              /*Alinea el texto del footer en el cetro horizontalmente*/
+  padding: 20px;                   /*Espacio interno de los elemetos*/
+  margin-top: 20px;
+}

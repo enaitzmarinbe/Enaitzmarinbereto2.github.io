@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+  margin: 0;                      /* Elimina márgenes por defecto de todos los elementos */
+  padding: 0;                     /* Elimina padding por defecto de todos los elementos */
+  box-sizing: border-box;         /* Hace que width y height incluyan padding y borde */
+  font-family: Arial, sans-serif; /* Fuente por defecto */
+  line-height: 1.6;
+}
+
+/* Contenedor del navbar */
+#navbar {
+  display: flex;               /* Activa flexbox para alinear elementos en fila */
+  align-items: center;         /* Centra verticalmente los elementos dentro del navbar */
+  position: relative;          /* Permite que los elementos absolute dentro se posicionen respecto al navbar */
+  padding: 10px 20px;          /* Espacio interno arriba/abajo y a los lados */
+  background-color: #db6f0a; /* Color de fondo naranja */
+}
+
+/* Ajustes de logo y nombre de tienda */
+#logo {
+  display: flex;            /* Flex para alinear imagen y texto del logo en línea */
+  align-items: center;      /* Centra verticalmente la imagen y el nombre */
+  gap: 10px;                /* Espacio entre imagen y texto */
+}
+
+#logo img {
+  height: 50px;             /* Altura fija para el logo */
+}
+
+#logo a {
+  align-content: center;
+  color: white;           /* Color del texto */
+  font-size: 1.5rem;        /* Tamaño de fuente */
+  font-weight: bold;        /* Negrita */
+  text-decoration: none;    /*Quita la decoracion del texto default*/
+}
+
+/* Menú centrado */
+.menu-items {
+  display: flex;            /* Flex para poner los items en fila */
+  gap: 30px;                /* Espacio entre los items */
+  position: absolute;       /* Posiciona el menú respecto al navbar */
+  align-items: center;      /* Centra verticalmente los items */
+  left: 42%;                /* Hace que los items en .menu-items se centren adecuadamente en la barra, comenzando desde un punto en concreto*/
+}
+
+.menu-items a {
+  color: white;           /* Color de los enlaces */
+  text-decoration: none;    /* Quita subrayado que tendria si no*/
+  font-weight: bold;        /* Negrita */
+}
+
+
+/* Pequeños detalles generales */
+section {
+padding: 20px;              /*espacio entre secciones*/
+}
+
+h2 {
+    color: #ff9900;                   /*color de los h2*/
+    border-bottom: 1px solid #c2b2b2; /*añade una barrita debajo de todos los h2*/
+    padding: 5px;                       /*espacio interno de los h2*/
+    font-size: 1.8rem;                  /*tamaño de la letra*/
+}
+
+h3 {
+    color: #ff9900;       /*color de los h3*/
+}
+
+p {
+padding: 10px;              /* espacio interno de los parrafos*/
+}
+
+li {
+padding: 5px;               /*espacio interno de los ul*/
+}
+
+/* Introducción */
+.intro h2 {
+    text-align: center;     /*alinea el h2 en el centro*/
+}
+
+/* Historia */
+.historia-content {
+    display: flex;          /* Activa flexbox para alinear elementos en fila */
+    gap: 30px;              /* Espacio entre los items */
+    align-items: center;    /*dentra los items verticalmente*/
+}
+
+.historia-texto {
+    flex: 2;                /*espacio asignado a la parte de historia-texto*/
+}
+
+.historia-imagen {
+    flex: 1;                /*espacio asignado a la parte de historia-texto*/
+}
+
+.historia-imagen img {
+    height: 200px;                /*altura de la imagen*/
+    display: flex;                /*activa el flex*/
+    align-items: center;          /*centra verticalmente*/
+    justify-content: center;      /*centra horizontalemnte*/
+    padding-top: 10px;            /*espacio en la parte de arriba de la foto*/
+}
+
+
+/* Valores */
+.valores li {
+    margin-left:20px;              /*margen a la izquierda de la lista de valores*/
+}
+
+.valores h3 {
+    color: #ff9900;              /*color de los h3 en valores*/
+    padding: 10px;                 /*espacio interno de los h3 de valores*/
+}
+
+
+/* Servicios a domicilio */
+.servicios-items {
+    padding: 20px;                 /*espacio interno de la lista*/
+}
+
+/*Compromiso*/ 
+.compromiso li {
+    margin-left: 20px ;            /*dejo un poco de espacio a la izquierda en la lista de compromiso*/
+}
+
+/* Footer */
+footer {
+  background: #ff9900;           /*Color del fondo del footer*/
+  color: white;                  /*Color de la letra*/
+  text-align: center;              /*Alinea el texto del footer en el cetro horizontalmente*/
+  padding: 20px;                   /*Espacio interno de los elemetos*/
+}

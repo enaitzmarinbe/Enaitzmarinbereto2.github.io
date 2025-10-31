@@ -3,14 +3,14 @@
 <!--Titulo y referencia al css-->
 <head>
     <title>Pedir cita - DomusTech</title>
-    <link rel="stylesheet" href="pedir_cita.css">
+    <link rel="stylesheet" href="..\css\styles.css">
 </head>
 
 <body>
 <!-- Header -->
     <header id="navbar">
         <div id="logo">
-            <img src="logo DOMUSTECH.png" alt="Logo de la tienda" />
+            <img src="..\imagenes\logo DOMUSTECH.png" alt="Logo de la tienda" />
             <a href="Pagina_principal.html">DomusTech</a>
         </div>
 
@@ -20,6 +20,7 @@
                 <div><a href="pedir-cita.html">Pedir cita</a></div>
                 <div><a href="tienda.html">Tienda</a></div>
                 <div><a href="sobre-nosotros.html">Sobre nosotros</a></div>
+                <div><a href="valoraciones.html">Valoraciones</a></div>
             </div>
         </nav>
   </header>
@@ -44,7 +45,7 @@
             </div>
             
             <div class="form-group">
-                <label for="phone">Telefono *</label>
+                <label for="p   hone">Telefono *</label>
                 <input type="tel" id="phone" name="phone" required>
             </div>
 
@@ -58,7 +59,7 @@
                     <option value="mantenimiento">Mantenimiento y limpieza</option>
                     <option value="asesoramiento">Asesoramiento tecnico</option>
                     <option value="problemas">Solucion de problemas</option>
-                </select>
+                </select>      
             </div>
             
             <div class="form-group">
@@ -96,7 +97,9 @@
                 <textarea id="description" name="description" rows="6"></textarea>
             </div>
 <!--Button es para crear un boton (aunque en este caso no es funcional)-->            
+            <div id="boton">
             <button type="submit">Solicitar Cita</button>
+            </div>
         </form>
     </div>
 
@@ -106,6 +109,5 @@
         <p>2025 DomusTech - Montajes y mantenimientos informaticos</p>
     </div>
 </footer>
-
 </body>
 </html>

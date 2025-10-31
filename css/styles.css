@@ -1,0 +1,286 @@
+/* ===========================
+         RESET BASICO
+   =========================== */
+* {
+  margin: 0;                      /* Elimina márgenes por defecto de todos los elementos */
+  padding: 0;                     /* Elimina padding por defecto de todos los elementos */
+  box-sizing: border-box;         /* Hace que width y height incluyan padding y borde */
+  font-family: Arial, sans-serif; /* Fuente por defecto */
+  line-height: 1.6;               /*espacio entre lineas*/
+} 
+
+/* ===========================
+        ESTILOS GENERALES
+   =========================== */
+
+h1 {
+color: #ff9900;                    /*color del h1*/
+margin-top: 20px;                    /*margen arriba*/
+margin-bottom: 10px;                 /*margen abajo*/
+
+}
+
+h2 {
+color: #ff9900;                   /*color de los h2*/
+border-bottom: 1px solid #c2b2b2; /*añade una barrita debajo de todos los h2*/
+padding: 5px;                       /*espacio interno de los h2*/
+font-size: 1.8rem;                  /*tamaño de la letra*/
+margin-bottom: .6rem;               /*espacio dejabo de los h2 */
+}
+
+h3 {
+color: #ff9900;                   /*color de los h3*/
+padding: 10px;                      /*espacio interno de los*/
+}
+
+h4 {
+padding: 10px;                      /*espacio interno del h4*/
+text-align: center;                 /*alinea el h4 en el centro*/
+font-size: 0.9rem;                  /*tamaño del texto*/
+color: #2c3e50;                   /*color del texto*/
+font-weight: 500;                   /*peso del texto*/
+}
+
+h5 {
+margin-left: 13px;                  /*margen a la izquierda de los h5*/
+border-top: 1px solid #c2b2b2;    /*barrita encima de los h5*/
+}
+
+p {
+  margin-bottom: 10px;              /*margen debajo de los p*/
+}
+
+li {
+padding: 5px;                       /*espacio interno de las listas*/
+margin-left: 20px;                  /*deja un espacio a la izquierda en las listas*/
+}
+
+
+/* ===========================
+        BARRA DE NAVEGACION
+   =========================== */
+
+#navbar {
+  display: flex;                  /* Activa flexbox para alinear elementos en fila */
+  align-items: center;            /* Centra verticalmente los elementos dentro del navbar */
+  position: relative;             /* Permite que los elementos dentro se posicionen respecto al navbar */
+  padding: 10px 20px;             /* Espacio interno arriba/abajo y a los lados */
+  background-color: #db6f0a;    /* Color de fondo naranja */
+}
+
+#logo {
+  display: flex;                  /* Flex para alinear imagen y texto del logo en línea */
+  align-items: center;            /* Centra verticalmente la imagen y el nombre */
+  gap: 10px;                      /* Espacio entre imagen y texto */
+}
+
+#logo img {
+  height: 50px;                   /* Altura fija para el logo */
+}
+
+#logo a {
+  align-content: center;
+  color: white;                 /* Color del texto */
+  font-size: 1.5rem;              /* Tamaño de fuente */
+  font-weight: bold;              /* Negrita */
+  text-decoration: none;          /*quita decoraciones*/
+}
+
+.menu-items {
+  display: flex;                  /* Flex para poner los items en fila */
+  gap: 30px;                      /* Espacio entre los items */
+  position: absolute;             /* Posiciona el menú respecto al navbar */
+  align-items: center;            /* Centra verticalmente los items */
+  left: 35%;                      /* Hace que los items en .menu-items se centren adecuadamente en la barra, comenzando desde un punto en concreto*/
+}
+
+.menu-items a {
+  color: white;                 /* Color de los enlaces */
+  text-decoration: none;          /* Quita subrayado que tendria si no*/
+  font-weight: bold;              /* Negrita */
+}
+
+/* ===========================
+        MAIN Y ASIDE
+   =========================== */
+
+#contenido {
+  display: flex;                  /* Flex para main y aside en fila */
+  gap: 30px;                      /* Espacio entre main y aside */
+  justify-content: center;        /* Centrarlos horizontalmente */
+}
+
+#contenido main, 
+#contenido >main{
+  flex: 1 1 0;                   /*Espacio asignado al contenido*/
+  max-width: 900px;              /* Máximo ancho */
+  padding: 24px;                 /*Espacio interno */
+}
+
+#contenido main section { 
+  padding-bottom: 2rem;          /*espacio entre las secciones de los main*/
+}
+
+#container aside,
+#contenido > aside{
+  flex: 0 0 300px;               /*espacio asignado a la foto*/
+  padding: 20px;                 /* Espacio interno */
+}
+
+/* ===========================
+        FOTOS DE EJEMPLO
+   =========================== */
+
+.galeria { 
+  display:flex;                 /*Pone las fotos en fila*/
+  flex-wrap:wrap;               /*Las imagenes se ajustan a varias lineas si no entra en una */
+  gap:1rem;                     /*Espacio entre imagenes */
+  justify-content:center;       /*Centra horizontalmente las fotos */
+}
+
+.galeria img { 
+  width:30%;                    /*Ancho de las fotos*/
+  min-width:160px;              /*Minimo de ancho de las fotos*/
+  padding: 5px;                 /*Espacio interno*/
+}
+
+/* ===========================
+           FORMULARIO
+   =========================== */
+.container {
+  max-width: 80%;            /*Crea un contenedor y lo limita al 80% del tamaño de la pagina*/
+  margin-left: 10%;          /*Crea un margen de 10% para que no empieze completamente pegado a la izquierda de la pantalla*/
+}
+
+.form-group {
+    margin-bottom: 15px;     /*Espacio entre secciones*/
+}
+
+label {
+    margin-bottom: 5px;      /*Deja un espacio debajo de todos los labels*/
+    font-weight: bold;       /*Lo pone en negrita*/
+}
+
+input, select, textarea {
+  width: 100%;               /*Hace que las cajas sean al tamaño del 100%, en este caso del contenedor que hemos especificado antes que solo sea el 80% de la pantalla*/
+  padding: 8px;              /*Espacio interno de las cajas donde escribes o eliges tu informacion*/
+  border: 1px solid #ddd;  /*Hace que el borde de las cajas sea mas fino y de otro color*/      
+}
+
+#boton button {
+    background-color: #ff9900; /*Color del boton*/
+    color: white;              /*Color del texto*/
+    font-size: 16px;             /*Tamaño del texto*/
+    border: none;                /*Quita el borde al boton*/
+    padding: 10px 20px;          /*Espacio interno del boton*/
+    cursor: pointer;             /*Cambia el cursor al estar encima del boton*/
+    margin-bottom: 20px;         /*Margen debajo del boton*/
+}
+
+/* ===========================
+        BARRA DE BUSQUEDA
+   =========================== */
+
+.search-container {
+  display: flex;                  /*Activa el flex*/
+  justify-content: center;        /*Centra horizontalmente*/
+  align-items: center;            /*Centra verticalemnte*/
+  margin: 20px;                   /*Crea un margen*/
+}
+
+#search-input {
+  padding: 10px 15px;             /*Tamaño interno de la barra de busqueda*/
+  width: 250px;                   /*Ancho de la barra de busqueda*/
+  border: 2px solid #ccc;       /*Ancho del borde y color*/
+  border-radius: 25px 0 0 25px;   /*Redondea el borde*/
+  font-size: 16px;                /*Tamaño del texto*/
+}
+
+#search-button {
+  padding: 10px 15px;             /*Tamaño interno del boton de busqueda*/
+  border: 2px solid #ccc;       /*Ancho del borde y color*/
+  border-left: none;              /*Quita espacio entre barra de busqueda y boton de husqueda*/
+  border-radius: 0 25px 25px 0;   /*Redondea el borde*/
+  cursor: pointer;                /*Cambia el cursor al ponerlo encima*/
+  font-size: 16px;                /*Tamaño del texto*/            
+}
+
+#search-button:hover {
+  background-color: #ff9900;    /*Color al poner el cursor encima*/
+}
+
+/* ===========================
+        GALERIA DE TIENDA
+   =========================== */
+
+.componentes {
+    display: flex;                /*Activa el flex*/
+    flex-wrap: wrap;              /*Pone los items en varias lineas*/
+    gap: 15px;                    /*Espacio entre items*/
+    justify-content: center;      /*Centra los items*/
+}
+
+.foto-container {
+    flex: 0 0 calc(25% - 20px);   /* 4 elementos por línea (100%/4) */
+    max-width: calc(25% - 20px);  /*Maximo de anchura del contenedor de foto+texto (100%/4)*/
+}
+
+.foto-container:hover {
+  cursor: pointer;                /*cambia el cursor al ponerlo encima del contenedor*/
+} 
+
+.foto {
+    width: 100%;                  /*100% del tamaño del contenedor de anchura*/
+}
+
+/* ===========================
+            TEXTO
+   =========================== */
+
+.texto {
+  max-width: 80%;                 /*Crea un contenedor y lo limita al 80% del tamaño de la pagina*/
+  margin-left: 10%;               /*Crea un margen de 10% para que no empieze completamente pegado a la izquierda de la pantalla*/
+}
+
+.historia-content {
+    display: flex;                /*Activa flex*/
+    gap: 30px;                    /*Espacio entre los items*/
+    align-items: center;          /*Centra los items verticalmente*/
+}
+
+.historia-texto {
+    flex: 2;                      /*Espacio asignado a la parte de historia-texto*/
+}
+
+.historia-imagen {   
+    flex: 1;                      /*Espacio asignado a la parte de historia-texto*/
+}
+
+.historia-imagen img {
+    height: 200px;                /*Altura de la imagen*/
+    display: flex;                /*Activa el flex*/
+    align-items: center;          /*Centra verticalmente*/
+    justify-content: center;      /*Centra horizontalemnte*/
+    padding-top: 10px;            /*Espacio en la parte de arriba de la foto*/
+}
+
+/* ===========================
+          VALORACIONES
+   =========================== */
+.reviews {
+  max-width: 80%;                 /*Crea un contenedor y lo limita al 80% del tamaño de la pagina*/
+  margin-left: 10%;               /*Crea un margen de 10% para que no empieze completamente pegado a la izquierda de la pantalla*/
+}
+
+
+
+/* ===========================
+            FOOTER
+   =========================== */
+footer {
+  background: #ff9900;           /*Color del fondo del footer*/
+  color: white;                  /*Color de la letra*/
+  text-align: center;              /*Alinea el texto del footer en el cetro horizontalmente*/
+  padding: 15px;                   /*Espacio interno de los elemetos*/
+  margin-top: 20px;                /*Crea un margen encima del footer*/
+}
